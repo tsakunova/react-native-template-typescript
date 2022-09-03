@@ -1,0 +1,53 @@
+diff --git a/node_modules/swagger-typescript-api/templates/base/http-clients/axios-http-client.eta b/node_modules/swagger-typescript-api/templates/base/http-clients/axios-http-client.eta
+index 54534d5..c6cf266 100644
+--- a/node_modules/swagger-typescript-api/templates/base/http-clients/axios-http-client.eta
++++ b/node_modules/swagger-typescript-api/templates/base/http-clients/axios-http-client.eta
+@@ -68,15 +68,23 @@ export class HttpClient<SecurityDataType = unknown> {
+ 
+     private createFormData(input: Record<string, unknown>): FormData {
+       return Object.keys(input || {}).reduce((formData, key) => {
+-        const property = input[key];
+-        formData.append(
+-            key,
+-            property instanceof Blob ?
+-                property :
+-            typeof property === "object" && property !== null ?
+-                JSON.stringify(property) :
+-            `${property}`
+-        );
++        const property: any = input[key];
++        
++        switch (true) {
++          case Array.isArray(property):
++            property.forEach(p => formData.append(key, p));
++            break;
++          case property instanceof Blob:
++            formData.append(key, property)
++            break;
++          case typeof property === "object" && property !== null:
++            formData.append(key, JSON.stringify(property))
++            break;
++          default:
++            formData.append(key, `${property}`)
++            break;
++        }
++        
+         return formData;
+       }, new FormData())
+     }
+@@ -109,13 +117,14 @@ export class HttpClient<SecurityDataType = unknown> {
+         return this.instance.request({
+             ...requestParams,
+             headers: {
+-                ...(type && type !== ContentType.FormData ? { "Content-Type": type } : {}),
++                ...(type ? { "Content-Type": type } : {}),
+                 ...(requestParams.headers || {}),
+             },
+             params: query,
+             responseType: responseFormat,
+             data: body,
+             url: path,
++            ...(type && type === ContentType.FormData  ? { transformRequest: () => body } : {}),
+ <% if (config.unwrapResponseData) { %>
+         }).then(response => response.data);
+ <% } else { %>

@@ -1,13 +1,16 @@
-import React from 'react';
-import {
-  TouchableOpacity
-} from 'react-native';
+import React, { StrictMode } from 'react';
+import { LogBox, TouchableOpacity } from 'react-native';
 import { ACTIVE_OPACITY } from 'styles/constants';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Home } from 'features/Home';
-import { AppRoutes, defaultScreenOptions } from './constants';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { observer } from 'mobx-react-lite';
+
 import { Color } from 'styles/colors';
+import { LoginNavigator } from 'navigation/LoginNavigator';
+import { AppNavigator } from 'navigation/AppNavigator';
+
+LogBox.ignoreAllLogs(true);
 
 DefaultTheme.colors.background = Color.WHITE;
 
@@ -21,15 +24,28 @@ TouchableOpacity.defaultProps = {
 
 const Stack = createStackNavigator();
 
-export const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={ defaultScreenOptions } >
-        <Stack.Screen
-          name={ AppRoutes.HOME }
-          component={ Home }
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+export const App = observer(
+  () => {
+    // useOnMount(
+    //   //NOTE we check if the user is authorized or isn't by api's request (getUser)
+    // );
+
+    return (
+      <StrictMode>
+        <SafeAreaProvider>
+            <NavigationContainer>
+              <StatusBar barStyle='dark-content'/>
+              {
+                !store.isLoggedIn
+                  ? <LoginNavigator />
+                  : <AppNavigator />
+              }
+              <BottomSheet />
+              <DatePicker />
+              <LoadingOverlay />
+            </NavigationContainer>
+        </SafeAreaProvider>
+      </StrictMode>
+    );
+  }
+);

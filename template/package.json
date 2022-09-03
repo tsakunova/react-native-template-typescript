@@ -7,15 +7,19 @@
     "ios": "react-native run-ios --simulator=\"iPhone 13 Pro\"",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "tsc": "tsc",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "npm run lint -- --fix",
-    "useSharedGitHooks": "git config core.hooksPath hooks",
-    "postinstall": "patch-package & npm run useSharedGitHooks"
+    "parseSwagger": "node ./scripts/parseSwagger",
+    "postinstall": "node ./scripts/setupProject"
   },
   "dependencies": {
     "react": "18.0.0",
     "react-native": "0.69.5",
+    "@react-native-async-storage/async-storage": "1.17.0",
+    "@react-native-clipboard/clipboard": "1.10.0",
+    "@react-native-firebase/app": "14.7.0",
+    "@react-native-firebase/messaging": "14.7.0",
     "react-native-permissions": "3.3.1",
     "@react-navigation/native": "6.0.8",
     "@react-navigation/stack": "6.1.1",
@@ -24,9 +28,14 @@
     "mobx-react-lite": "3.2.1",
     "i18n-js": "3.8.0",
     "lodash": "4.17.21",
-    "babel-plugin-module-resolver": "4.1.0"
+    "date-fns": "2.29.1",
+    "babel-plugin-module-resolver": "4.1.0",
+    "react-native-encrypted-storage": "4.0.2",
+    "react-native-ultimate-config": "4.0.0",
+    "react-native-fast-image": "8.5.11"
   },
   "devDependencies": {
+    "swagger-typescript-api": "9.3.1",
     "@tsconfig/react-native": "2.0.2",
     "@babel/core": "7.12.9",
     "@babel/runtime": "7.12.5",

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "682764335923",
+    "project_id": "together-prod-2638a",
+    "storage_bucket": "together-prod-2638a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682764335923:android:5bff1c81931a9ae1541c46",
+        "android_client_info": {
+          "package_name": "com.epam.together"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682764335923-edu2elojcosn5vvub57n9dj7q1qh3m2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqIKrnYTuBRz6sCO6TUJU7ffEv3OmO9Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682764335923-edu2elojcosn5vvub57n9dj7q1qh3m2r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "682764335923-osh84d1ikfge1tehtrra9qlmp3569f01.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.epam.together"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

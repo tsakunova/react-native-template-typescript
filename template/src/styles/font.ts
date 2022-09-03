@@ -5,18 +5,20 @@ import { Color } from './colors';
 
 
 export enum FontWeight {
-  BLACK = 'Roboto-Black',
-  BLACK_ITALIC = 'Roboto-BlackItalic',
-  BOLD = 'Roboto-Bold',
-  BOLD_ITALIC = 'Roboto-BoldItalic',
-  ITALIC = 'Roboto-Italic',
-  LIGHT = 'Roboto-Light',
-  LIGHT_ITALIC = 'Roboto-LightItalic',
-  MEDIUM = 'Roboto-Medium',
-  MEDIUM_ITALIC = 'Roboto-MediumItalic',
-  REGULAR = 'Roboto-Regular',
-  THIN = 'Roboto-Thin',
-  THIN_ITALIC = 'Roboto-ThinItalic',
+  BLACK = 'Rubik-Black', // 900
+  BLACK_ITALIC = 'Rubik-BlackItalic',
+  EXTRA_BOLD = 'Rubik-ExtraBold', // 800
+  EXTRA_BOLD_ITALIC = 'Rubik-ExtraBoldItalic',
+  BOLD = 'Rubik-Bold', // 700
+  BOLD_ITALIC = 'Rubik-BoldItalic',
+  SEMI_BOLD = 'Rubik-SemiBold', // 600
+  SEMI_BOLD_ITALIC = 'Rubik-SemiBoldItalic',
+  MEDIUM = 'Rubik-Medium', // 500
+  MEDIUM_ITALIC = 'Rubik-MediumItalic',
+  REGULAR = 'Rubik-Regular', // 400
+  ITALIC = 'Rubik-Italic',
+  LIGHT = 'Rubik-Light', //300
+  LIGHT_ITALIC = 'Rubik-LightItalic',
 }
 
 export const font = {
