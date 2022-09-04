@@ -32,7 +32,7 @@
     "babel-plugin-module-resolver": "4.1.0",
     "react-native-encrypted-storage": "4.0.2",
     "react-native-ultimate-config": "4.0.0",
-    "react-native-fast-image": "8.5.11"
+    "react-native-fast-image": "8.6.0"
   },
   "devDependencies": {
     "swagger-typescript-api": "9.3.1",
