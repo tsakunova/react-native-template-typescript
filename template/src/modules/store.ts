@@ -1,4 +1,4 @@
-import { observable } from 'mobx';
+import { action, observable } from 'mobx';
 import { TStyle } from 'react-native-modalize/lib/options';
 
 type DatePickerConfig = Partial<{

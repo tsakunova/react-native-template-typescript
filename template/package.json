@@ -32,7 +32,7 @@
     "date-fns": "2.29.1",
     "babel-plugin-module-resolver": "4.1.0",
     "react-native-modalize": "2.0.13",
-    "react-native-date-picker": "4.2.0",
+    "react-native-date-picker": "4.2.5",
     "react-native-gesture-handler": "1.10.3",
     "react-native-encrypted-storage": "4.0.2",
     "react-native-safe-area-context": "3.2.0",
