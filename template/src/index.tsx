@@ -2,13 +2,16 @@ import React, { StrictMode } from 'react';
 import { LogBox, TouchableOpacity } from 'react-native';
 import { ACTIVE_OPACITY } from 'styles/constants';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { observer } from 'mobx-react-lite';
 
 import { Color } from 'styles/colors';
 import { LoginNavigator } from 'navigation/LoginNavigator';
 import { AppNavigator } from 'navigation/AppNavigator';
+import { BottomSheet } from 'modules/BottomSheet';
+import { DatePicker } from 'modules/DatePicker';
+import { LoadingOverlay } from 'modules/LoadingOverlay';
+
 
 LogBox.ignoreAllLogs(true);
 
@@ -22,7 +25,6 @@ TouchableOpacity.defaultProps = {
   activeOpacity: ACTIVE_OPACITY,
 };
 
-const Stack = createStackNavigator();
 
 export const App = observer(
   () => {
