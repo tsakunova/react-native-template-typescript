@@ -26,6 +26,7 @@
     "axios": "0.26.1",
     "mobx": "6.3.3",
     "mobx-react-lite": "3.2.1",
+    "hex-to-rgba": "2.0.1",
     "i18n-js": "3.8.0",
     "lodash": "4.17.21",
     "date-fns": "2.29.1",

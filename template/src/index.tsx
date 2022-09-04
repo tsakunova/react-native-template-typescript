@@ -1,5 +1,5 @@
 import React, { StrictMode } from 'react';
-import { LogBox, TouchableOpacity } from 'react-native';
+import { LogBox, StatusBar, TouchableOpacity } from 'react-native';
 import { ACTIVE_OPACITY } from 'styles/constants';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -11,6 +11,7 @@ import { AppNavigator } from 'navigation/AppNavigator';
 import { BottomSheet } from 'modules/BottomSheet';
 import { DatePicker } from 'modules/DatePicker';
 import { LoadingOverlay } from 'modules/LoadingOverlay';
+import { store } from 'store';
 
 
 LogBox.ignoreAllLogs(true);

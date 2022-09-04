@@ -4,7 +4,7 @@ import config from 'react-native-ultimate-config';
 
 import { } from 'consts';
 import { store } from 'store';
-import { ACCESS_TOKEN, REFRESH_TOKEN  readFormSecureStorage } from 'storage';
+import { ACCESS_TOKEN, REFRESH_TOKEN, readFormSecureStorage } from 'storage';
 import { getHost } from 'utils/getHost';
 
 import { api } from './index';
