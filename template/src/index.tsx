@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import React, { StrictMode } from 'react';
 import { LogBox, StatusBar, TouchableOpacity } from 'react-native';
 import { ACTIVE_OPACITY } from 'styles/constants';
