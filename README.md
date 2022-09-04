@@ -5,11 +5,5 @@
 ##  Usage
 
 ```sh
-npx react-native init MyApp --template react-native-template-typescript
-```
-
-### Usage with older versions of React Native
-
-```sh
-npx react-native init MyApp --template 
+npx react-native init MyApp --template @Hirurgo/react-native-template-typescript
 ```
