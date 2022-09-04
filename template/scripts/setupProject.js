@@ -20,9 +20,9 @@ console.log('\n\n STEP 2 - Apply .env file to native iOS/Android platforms');
 console.log(execSync('yarn rnuc .env', { encoding: 'utf8' }));
 
 
-// STEP 3
-console.log('\n\n STEP 3 - Set hooks from ./hook folder in git (thats allow to share project git hooks between developers)');
-console.log(execSync('git config core.hooksPath hooks', { encoding: 'utf8' }));
+// // STEP 3
+// console.log('\n\n STEP 3 - Set hooks from ./hook folder in git (thats allow to share project git hooks between developers)');
+// console.log(execSync('git config core.hooksPath hooks', { encoding: 'utf8' }));
 
 
 // STEP 4
