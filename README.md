@@ -5,5 +5,5 @@
 ##  Usage
 
 ```sh
-npx react-native init MyApp --template @Hirurgo/react-native-template-typescript
+npx react-native init MyApp --template https://github.com/Hirurgo/react-native-template-typescript.git
 ```
