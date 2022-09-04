@@ -11,5 +11,5 @@ npx react-native init MyApp --template react-native-template-typescript
 ### Usage with older versions of React Native
 
 ```sh
-npx react-native init MyApp --template react-native-template-typescript@6.9.*
+npx react-native init MyApp --template 
 ```
