@@ -33,6 +33,8 @@ target 'HelloWorld' do
   pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
   
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'HelloWorldTests' do
     inherit! :complete
     # Pods for testing
