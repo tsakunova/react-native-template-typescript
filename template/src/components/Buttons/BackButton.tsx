@@ -23,7 +23,7 @@ export const BackButton: React.FC = () => {
       containerStyle={ styles.container }
       onPress={ goBack }
     >
-      <ArrowLeft color={ Color.PRIMARY_DARK } />
+      <ArrowLeft color={ Color.BLACK } />
     </IconButton>
   );
 };
